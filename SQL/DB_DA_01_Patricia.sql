@@ -13,6 +13,7 @@ create table tbvdd(
 	cdvdd int primary key,
 	nmvdd varchar(60),
 	matfunc int, 
+	perccomissao decimal(19,2),
 	sxvdd varchar(20));
 	
 create table tbpro(
@@ -45,19 +46,24 @@ alter table tbdep
 	
 -- Inserir dados na tabela
 
---insert into tbvdd(cdvdd,nmvdd,matfunc,sxvdd) values (1,'Funcionario 1',1, 'M');
+insert into tbvdd (cdvdd,nmvdd,sxvdd) values (1,'Funcionario1',1);
+insert into tbvdd (cdvdd,nmvdd,sxvdd) values (2,'Funcionario2',1);
+insert into tbvdd (cdvdd,nmvdd,sxvdd) values (3,'Funcionario3',1);
+select * from tbvdd
+
+--insert into tbvdd values (2,'Funcionario 2',1, 1, 2);
 --insert into tbvdd(nmvdd,matfunc,sxvdd) values ('Funcionario 2',2, 'F');
 --insert into tbcli(cdcli,nmcli) values (3,'cliente 3');
 
---select * from tbvdd
+
 
 
 -- Vendas
 
-insert into tbven (cdven, dtven, cdvdd, qtven) values (1,'20030329',1,35.50);
+--insert into tbven values (1,'20030329',1,35.50);
 --insert into tbven (cdven, dtven, cdcli, qtven) values (2,'20030328',4,1.00);
 
-select * from tbven
+--select * from tbven
 
 -- Comando para juntar as tabelas
 --select * 
